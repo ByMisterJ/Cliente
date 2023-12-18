@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+    <script>
+        var sumanotas = 0
+        var media = 0
+        for (let i = 0; i < 5; i++) {
+            var nota = parseFloat(prompt("Introduce una nota"))
+            sumanotas = nota + sumanotas
+        }
+        media = sumanotas / 5
+        if(media>=5){
+            alert("Has aprobado con un: "+media)
+        }else alert("Has suspendido con un: "+media)
+    </script>
+</body>
+</html>

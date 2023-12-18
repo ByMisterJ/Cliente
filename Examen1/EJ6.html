@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+    <script>
+        var mes = parseInt(prompt("introduce numero del el mes"))
+        var dias = 31
+
+        if(mes<=0 || mes>12){
+            console.error("Mes no valido")
+        }else{
+            if (mes%2==0 && mes<=6 || mes%2!=0 && mes>=7) {
+            dias = 30
+        }
+        if(mes==2){
+            dias = 28
+        }
+        console.log("el mes "+mes+" tiene "+dias+" dias")
+        }
+    </script>
+</body>
+</html>

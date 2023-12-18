@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+    <script>
+        var tarifa = parseFloat(15)
+        var total = parseFloat(0)
+        var personas = parseFloat(prompt("introduce el numero de personas"))
+        var dias = parseFloat(prompt("introduce el numero de dias"))
+
+
+        if(personas>5 && dias >=7){
+            tarifa = tarifa * 0.75
+        }
+
+        total = tarifa * dias * personas
+
+        
+        console.log("El coste sera: "+total+"€")
+    </script>
+</body>
+</html>
