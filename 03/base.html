@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="03.js"></script>
+    <script src="04.js"></script>
+    <script src="05.js"></script>
+</head>
+<body>
+
+    <button type="button" onclick="document.getElementById('prueba').innerHTML='CAMBIANDO el contenido'">Dale</button>
+    <p id="prueba"></p>
+    
+    <button onclick="cambiarImagen()">Cambiar Imagen</button>
+    
+    <br>
+    
+    <img id="carch" src="car1.jpeg" alt="car">
+
+    <br>
+
+    <video id="myVideo" width="320" height="240" controls>
+        <source id="videoSource" src="video1.mp4" type="video/mp4">
+        Este buscador no soporta videos
+    </video>
+    
+    <br>
+
+    <button onclick="cambiarVideo()">Cambiar Video</button>
+    
+    <br>
+    
+    <img id="foto" src="car1.jpeg" alt="car">
+
+    <br>
+
+    <button onclick="cambiarFotos()">Cambiar Fotos</button>
+    
+    <br>
+
+
+</body>
+</html>
