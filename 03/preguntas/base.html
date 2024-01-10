@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="preguntas.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action_page.php">
+
+        <h3 id="q1">El cielo es morado?</h3>
+          <input type="radio" id="qt1" name="test" value="qt1" onclick="mentira('q1')">
+          <label for="qt1">verdadero</label>
+          <input type="radio" id="qf1" name="test" value="qf1" onclick="verdad('q1')">
+          <label for="qf1">falso</label>
+
+        <h3 id="q2">La cafeina es adicctiva?</h3>
+          <input type="radio" id="verdadero" name="test" value="qt2" onclick="verdad('q2')">
+          <label for="qt2">verdadero</label>
+          <input type="radio" id="falso" name="test" value="qf2" onclick="mentira('q2')">
+          <label for="qf2">falso</label>
+
+        <h3 id="q3">el pelo crece?</h3>
+          <input type="radio" id="verdadero" name="test" value="qt3" onclick="verdad('q3')">
+          <label for="qt3">verdadero</label>
+          <input type="radio" id="falso" name="test" value="qf3" onclick="mentira('q3')">
+          <label for="qf3">falso</label>
+
+        <h3 id="q4">el comunismo funciona?</h3>
+          <input type="radio" id="verdadero" name="test" value="qt4" onclick="mentira('q4')">
+          <label for="qt4">verdadero</label>
+          <input type="radio" id="falso" name="test" value="qf4" onclick="verdad('q4')">
+          <label for="qf4">falso</label>
+          
+        <h3 id="q5">kebab?</h3>
+          <input type="radio" id="verdadero" name="test" value="qt5" onclick="verdad('q5')">
+          <label for="qt5">obvio</label>
+          <input type="radio" id="falso" name="test" value="qf5" onclick="mentira('q5')">
+          <label for="qf5">nah</label>
+          
+        <h3 id="q6">0! = ?</h3>
+          <input type="radio" id="verdadero" name="test" value="qt6" onclick="verdad('q6')">
+          <label for="qt6">1</label>
+          <input type="radio" id="falso" name="test" value="qf6" onclick="mentira('q6')">
+          <label for="qf6">0</label>
+          
+        </form> 
+</body>
+</html>
