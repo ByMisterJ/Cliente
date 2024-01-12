@@ -1,0 +1,29 @@
+onabort: Se dispara cuando se interrumpe la carga de un recurso.
+onblur: Se activa cuando un elemento pierde el foco.
+onclick: Ocurre cuando se hace clic en un elemento.
+onchange: Se produce cuando el valor de un elemento ha sido cambiado.
+oncontextmenu: Se desencadena cuando se hace clic con el botón derecho en un elemento para abrir su menú contextual.
+ondblclick: Se activa cuando se realiza un doble clic en un elemento.
+ondrag: Se dispara cuando un elemento está siendo arrastrado.
+ondragend: Se ejecuta cuando el proceso de arrastre ha finalizado.
+ondragenter: Se activa cuando un elemento o texto es arrastrado a una zona válida.
+ondragleave: Se dispara cuando un elemento o texto es arrastrado fuera de una zona válida.
+ondragover: Se activa cuando un elemento o texto es arrastrado sobre una zona válida.
+ondragstart: Se ejecuta cuando el usuario comienza a arrastrar un elemento.
+ondrop: Se dispara cuando un elemento o texto es soltado en una zona válida.
+onerror: Se produce cuando se encuentra un error durante la carga o ejecución de un recurso.
+onfocus: Se activa cuando un elemento recibe el foco.
+oninput: Ocurre cuando se introduce un valor en un elemento, por lo general, un campo de entrada.
+onkeydown: Se activa cuando una tecla es presionada y mantenida.
+onkeypress: Se dispara cuando una tecla es presionada.
+onkeyup: Se ejecuta cuando una tecla es liberada.
+onload: Se activa cuando un recurso y sus dependencias han sido completamente cargados.
+onmousedown: Se dispara cuando se presiona un botón del mouse.
+onmousemove: Ocurre cuando el puntero del mouse se mueve.
+onmouseout: Se activa cuando el puntero del mouse sale de un elemento.
+onmouseover: Se dispara cuando el puntero del mouse se coloca sobre un elemento.
+onmouseup: Ocurre cuando se libera un botón del mouse.
+onresize: Se ejecuta cuando la ventana del navegador o un elemento se redimensiona.
+onselect: Se dispara cuando se selecciona texto en un elemento de entrada o área de texto.
+onsubmit: Ocurre cuando un formulario es enviado.
+onunload: Se activa cuando el usuario abandona la página o cierra la ventana del navegador.
