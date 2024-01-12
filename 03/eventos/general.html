@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="evento01.js"></script>
+</head>
+<body>
+    <h2>Modelo de registro de eventos en línea</h2>
+    <!--Cada elemento xhtml tiene sus posibles eventos como propiedades de cada tipo.-->
+    <h3 id="cab1" onclick="this.innerHTML='Javascript en XHTML'"
+    onmouseover="this.style.background='red'"
+    onmouseout="this.style.background='white'">pulsa aqui para ver lo que se ejecuta</h3>
+
+    <h3 id="cab2" onclick="cambiarelemento('cab2')">pulsa otra vez</h3>
+</body>
+</html>
