@@ -1,3 +1,4 @@
+DICCIONARIO DE EVENTOS ON
 onabort: Se dispara cuando se interrumpe la carga de un recurso.
 onblur: Se activa cuando un elemento pierde el foco.
 onclick: Ocurre cuando se hace clic en un elemento.
@@ -27,3 +28,40 @@ onresize: Se ejecuta cuando la ventana del navegador o un elemento se redimensio
 onselect: Se dispara cuando se selecciona texto en un elemento de entrada o área de texto.
 onsubmit: Ocurre cuando un formulario es enviado.
 onunload: Se activa cuando el usuario abandona la página o cierra la ventana del navegador.
+
+5+ de cada tipo.
+
+Eventos del Mouse:
+onmouseleave: Se activa cuando el puntero del mouse sale del área de un elemento.
+onmouseenter: Se dispara cuando el puntero del mouse entra en el área de un elemento.
+onmousewheel: Ocurre cuando se utiliza la rueda del mouse para hacer zoom en un elemento.
+oncontextmenu: Se desencadena cuando se hace clic con el botón derecho en un elemento para abrir su menú contextual.
+onselectstart: Se activa cuando se inicia la selección de texto en un elemento.
+
+Eventos de Teclado:
+oncompositionstart: Se ejecuta cuando se inicia la composición de caracteres en un campo de texto.
+oncompositionend: Ocurre cuando se completa la composición de caracteres en un campo de texto.
+oncut: Se dispara cuando se corta contenido en un elemento.
+onpaste: Se activa cuando se pega contenido en un elemento.
+onkeydown: Se activa cuando una tecla es presionada y mantenida.
+
+Eventos de Formulario:
+onreset: Ocurre cuando se restablece un formulario.
+oninput: Ocurre cuando se introduce un valor en un elemento, por lo general, un campo de entrada.
+oninvalid: Se dispara cuando un elemento de formulario es inválido.
+onchange: Se produce cuando el valor de un elemento ha sido cambiado.
+onsubmit: Ocurre cuando un formulario es enviado.
+
+Eventos de Ventana:
+onbeforeunload: Se ejecuta antes de que la ventana del navegador se descargue o cierre.
+onhashchange: Se dispara cuando la parte hash de la URL cambia.
+onmessage: Ocurre cuando se recibe un mensaje desde otra ventana o marco.
+ononline: Se activa cuando el navegador detecta que la conexión a Internet se ha restaurado.
+onoffline: Se dispara cuando el navegador detecta que la conexión a Internet se ha perdido.
+
+Eventos Generales:
+onscroll: Se activa cuando se desplaza el contenido de un elemento.
+onfocusin: Ocurre cuando un elemento o su descendiente obtiene el foco.
+onfocusout: Se activa cuando un elemento o su descendiente pierde el foco.
+onstorage: Se dispara cuando se modifica un objeto de almacenamiento web (localStorage o sessionStorage).
+onwheel: Ocurre cuando se utiliza la rueda del mouse para desplazar un elemento.
