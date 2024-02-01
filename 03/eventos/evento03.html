@@ -6,20 +6,15 @@
     <title>Document</title>
     <script>
         document.addEventListener("DOMContentLoaded", function (){
-            document.getElementById('boton').addEventListener("click", saludar);
+            document.body.addEventListener("keydown", backcol)
+            function backcol() {  
+                document.body.style.backgroundColor="blue"
+            }
             })
 
-        function saludar(){
-            alert('Hola mundo')
-        }
-
-
-        
-        
     </script>
 </head>
 <body>
-    <button id="boton">Hola</button>
-    <p id="p"></p>
+    
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilo para la imagen */
+        #imagen {
+            height: 50px;
+            width: 50px;
+            transition: all 0.3s ease; /* Animación de transición suave */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleccionamos la imagen
+            var imagen = document.getElementById("imagen");
+
+            // Añadimos el evento 'wheel' para detectar el movimiento del mouse
+            document.body.addEventListener("wheel", function (event) {
+                // Detectamos la dirección del scroll
+                var delta = Math.sign(event.deltaY);
+
+                // Cambiamos el tamaño de la imagen
+                if (delta > 0) {
+                    // Hacia abajo (scroll hacia abajo), reducimos el tamaño
+                    imagen.style.height = (imagen.clientHeight * 0.9) + "px";
+                    imagen.style.width = (imagen.clientWidth * 0.9) + "px";
+                } else {
+                    // Hacia arriba (scroll hacia arriba), aumentamos el tamaño
+                    imagen.style.height = (imagen.clientHeight * 1.1) + "px";
+                    imagen.style.width = (imagen.clientWidth * 1.1) + "px";
+                }
+
+                // Evitamos el comportamiento predeterminado del scroll
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <img id="imagen" src="img/germanylogo.png">
+</body>
+</html>

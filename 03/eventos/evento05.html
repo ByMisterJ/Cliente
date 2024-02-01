@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            // Selecciona la imagen
+            var imagen = document.querySelector("img");
+
+            // Escucha el evento keydown
+            document.body.addEventListener("keydown", function(event) {
+                // Verifica si la tecla presionada es "Enter" (código de tecla 13)
+                if (event.keyCode === 13) {
+                    // Cambia la imagen
+                    cambiarImagen();
+                }
+            });
+
+            // Función para cambiar la imagen
+            function cambiarImagen() {
+                // Puedes cambiar la imagen por la que desees aquí
+                imagen.src = "img/germanylogo.png";
+                imagen.alt = "Germany Logo";
+            }
+        });
+    </script>
+</head>
+<body>
+    <img src="img/polandlogo.png" alt="Poland Logo">
+</body>
+</html>

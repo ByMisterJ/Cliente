@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleccionamos el segundo enlace
+            var segundoEnlace = document.querySelectorAll("p")[3].querySelector("a");
+
+            // Añadimos un evento de clic al segundo enlace
+            segundoEnlace.addEventListener("click", function(event) {
+                // Prevenimos el comportamiento predeterminado del enlace
+                alert("haz click aqui para ganar un Iphone 15 Pro")
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Este va</p>
+    <p><a href="https://www.w3schools.com/js/default.asp">Enlace que funciona</a></p>
+    <br>
+    <p>Este no va</p>
+    <p><a href="https://www.w3schools.com/js/default.asp">Enlace que no funciona</a></p>
+</body>
+</html>
