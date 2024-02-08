@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+setInterval(changeColor, 2000);
+
+function changeColor() {
+    var colors = ["red", "blue", "green", "yellow"];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById("color").style.color = randomColor;
+}
+    setInterval(changeColor, 2000);
+    
+    </script>
+</head>
+<body>
+    <p id="color" style="color: black;">Kayak</p>
+</body>
+</html>

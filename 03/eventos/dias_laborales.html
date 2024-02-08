@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilo opcional para los días */
+        .dia {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var dias = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+
+            // Obtener el cuerpo del documento
+            var cuerpoDocumento = document.body;
+
+            // Recorrer el array de días
+            for (var i = 0; i < dias.length; i++) {
+                // Crear un nuevo elemento <p> para cada día
+                var parrafo = document.createElement('p');
+                // Asignar el contenido del día al elemento <p>
+                parrafo.textContent = dias[i];
+                // Agregar una clase para estilizar los días (opcional)
+                parrafo.classList.add('dia');
+                // Agregar el elemento <p> al cuerpo del documento
+                cuerpoDocumento.appendChild(parrafo);
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

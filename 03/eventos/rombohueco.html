@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombo con X</title>
+    <style>
+        /* Estilo para mejorar la visualización del rombo */
+        pre {
+            font-family: monospace;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <pre id="rombo"></pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function dibujarRombo(tamaño) {
+                if (tamaño % 2 === 0) {
+                    tamaño++; 
+                }
+
+                let mitad = Math.floor(tamaño / 2);
+                let rombo = '';
+
+                for (let i = 0; i < tamaño; i++) {
+                    let línea = '';
+                    for (let j = 0; j < tamaño; j++) {
+                        if (i <= mitad) {
+                            if (j === mitad - i || j === mitad + i) {
+                                línea += '*';
+                            } else {
+                                línea += ' ';
+                            }
+                        } else {
+                            if (j === i - mitad || j === tamaño - 1 - (i - mitad)) {
+                                línea += '*';
+                            } else {
+                                línea += ' ';
+                            }
+                        }
+                    }
+                    rombo += línea + '\n';
+                }
+                document.getElementById('rombo').textContent = rombo;
+            }
+            
+            dibujarRombo(17);
+        });
+    </script>
+</body>
+</html>

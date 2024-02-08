@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombo con X</title>
+    <style>
+        /* Estilo para mejorar la visualización del rombo */
+        pre {
+            font-family: monospace;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <pre id="rombo"></pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para dibujar un rombo con "*"
+            function dibujarRombo(tamaño) {
+                // Inicializar una variable para almacenar el rombo
+                var rombo = '';
+
+                // Dibujar la mitad superior del rombo
+                for (var i = 1; i <= tamaño; i++) {
+                    // Agregar espacios en blanco antes de la "*"
+                    for (var j = 0; j < tamaño - i; j++) {
+                        rombo += ' ';
+                    }
+                    // Agregar las "*" seguidas de un espacio en blanco
+                    for (var k = 0; k < 2 * i - 1; k++) {
+                        rombo += '*';
+                    }
+                    // Agregar un salto de línea
+                    rombo += '\n';
+                }
+
+                // Dibujar la mitad inferior del rombo
+                for (var i = tamaño - 1; i >= 1; i--) {
+                    // Agregar espacios en blanco antes de la "*"
+                    for (var j = 0; j < tamaño - i; j++) {
+                        rombo += ' ';
+                    }
+                    // Agregar las "*" seguidas de un espacio en blanco
+                    for (var k = 0; k < 2 * i - 1; k++) {
+                        rombo += '*';
+                    }
+                    // Agregar un salto de línea
+                    rombo += '\n';
+                }
+
+                // Mostrar el rombo en el elemento pre
+                document.getElementById('rombo').textContent = rombo;
+            }
+
+            // Llamar a la función para dibujar un rombo con un tamaño específico
+            dibujarRombo(5); // Puedes ajustar el tamaño del rombo aquí
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let wordsArray = [];
+
+    function storeWords() {
+        let userInput = prompt("Enter some words:");
+        let words = userInput.split(" ");
+        wordsArray = wordsArray.concat(words);
+    }
+    
+    function showFirstWord(wordsArray) {
+        if (wordsArray.length > 0) {
+            alert(wordsArray[0]);
+        } else {
+            alert("No hay palabras.");
+        }
+    }
+
+    function showLastWord(wordsArray) {
+        if (wordsArray.length > 0) {
+            alert(wordsArray[wordsArray.length - 1]);
+        } else {
+            alert("No hay palabras.");
+        }
+    }
+    
+    function countOccupiedSpaces(wordsArray) {
+        let count = 0;
+        for (let i = 0; i < wordsArray.length; i++) {
+            if (wordsArray[i] !== "") {
+                count++;
+            }
+        }
+        alert("Palabras en el array: " + count);
+    }
+    
+    function wordsAlphabeticalOrdered(wordsArray) { 
+        let sortedArray = wordsArray.slice().sort();
+        let sortedString = sortedArray.join(", ");
+        window.open().document.write(sortedString);
+    }
+    
+    </script>
+</head>
+<body>
+
+    <button onclick="storeWords()">Almacenar palabras</button>
+    <br>
+    <p></p>
+    <button onclick="showFirstWord(wordsArray)">Primera palabra</button>
+    <br>
+    <p></p>
+    <button onclick="showLastWord(wordsArray)">Ultima palabra</button>
+    <br>
+    <p></p>
+    <button onclick="countOccupiedSpaces(wordsArray)">cantidad de palabras</button>
+    <br>
+    <p></p>
+    <button onclick="wordsAlphabeticalOrdered(wordsArray)">Palabras ordenadas</button>
+
+</body>
+</html>
