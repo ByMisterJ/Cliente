@@ -1,15 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stopwatch</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .time {
+            font-size: 48px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+    </style>
     <script>
-        var elCrono = setInterval(crono , 1000)
+        
+                var startTime;
+                var elapsedTime = 0;
+                var timerInterval;
+
+                function start() {
+                startTime = Date.now() - elapsedTime;
+                timerInterval = setInterval(updateTime, 10);
+                document.querySelector('.start-button').disabled = true;
+                }
+
+                function stop() {
+                clearInterval(timerInterval);
+                document.querySelector('.start-button').disabled = false;
+                }
+
+                function reset() {
+                clearInterval(timerInterval);
+                elapsedTime = 0;
+                clearTime();
+                document.querySelector('.start-button').disabled = false;
+                }
+
+                function clearTime() {
+                var currentTime = 0;
+                elapsedTime = 0;
+                var formattedTime = formatTime(elapsedTime);
+                document.querySelector('.time').textContent = formattedTime;
+                }
+
+                function updateTime() {
+                var currentTime = Date.now();
+                elapsedTime = currentTime - startTime;
+                var formattedTime = formatTime(elapsedTime);
+                document.querySelector('.time').textContent = formattedTime;
+                }
+
+                function formatTime(time) {
+                var milliseconds = Math.floor(time % 1000 / 10);
+                var seconds = Math.floor(time / 1000 % 60);
+                var minutes = Math.floor(time / 1000 / 60 % 60);
+                var hours = Math.floor(time / 1000 / 60 / 60);
+                return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}.${pad(milliseconds)}`;
+                }
+
+                function pad(value) {
+                return value.toString().padStart(2, '0');
+                }
         
     </script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="time">00:00:00</div>
+        <div class="buttons">
+            <button class="start-button" onclick="start()">Start</button>
+            <button onclick="stop()">Stop</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
 </body>
 </html>

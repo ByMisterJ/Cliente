@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function changeImage() {
+        const image = document.getElementById("imagen");
+        const images = ["img/germanylogo.png", "img/polandlogo.png"];
+        let currentIndex = 0;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            image.src = images[currentIndex];
+        }, 5000);
+    }
+        
+
+        setInterval(changeImage, 5000);
+    </script>
+</head>
+<body>
+    <img id="imagen" src="img/germanylogo.png" alt="">
+</body>
+</html>
