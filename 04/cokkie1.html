@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Example</title>
+</head>
+<body>
+    <script>
+        // Set a cookie
+        document.cookie = "name=John Doe; expires=Thu, 18 Dec 2022 12:00:00 UTC; path=/";
+
+        // Get a cookie
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        console.log(cookieValue);
+    </script>
+</body>
+</html>
