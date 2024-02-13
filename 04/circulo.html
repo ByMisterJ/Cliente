@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function closeWindow() {
-            window.close()
-        }
-                document.write(window.innerWidth + 'x' + window.innerHeight)
+        r = prompt("Introduce el radio del círculo");
+        const area = Math.PI * r * r;
+        document.write("El área del círculo es: " + area);
+            
     </script>
 </head>
 <body>
-    <h3>Spam</h3>
     <br>
-    <button onclick="closeWindow()">Cerrar</button>
-    
+    <button onclick="location.reload()">Refresh</button>
 </body>
 </html>

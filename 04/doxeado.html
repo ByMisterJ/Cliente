@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("Tu navegador es "+navigator.userAgent);
+        document.write("<br>");
+        document.write("Tu navegador es "+navigator.appName);
+        document.write("<br>");
+        var supportsJavaApplets = navigator.javaEnabled();
+        if (supportsJavaApplets) {
+            document.write("El navegador soporta applets de Java");
+        } else {
+            document.write("El navegador no soporta applets de Java");
+        }
+        document.write("<br>");
+        document.write("La altura de la pantalla es "+screen.height);
+        document.write("<br>");
+        document.write("La anchura de la pantalla es "+screen.width);
+        document.write("<br>");
+        document.write("La URL de la página actual es "+location.href);
+        document.write("<br>");
+        document.write('<button onclick="window.location.href=\'https://www.wikipedia.org\'">Ir a Wikipedia</button>');
+        
+
+    </script>
+     
+</head>
+<body>
+    
+</body>
+</html>

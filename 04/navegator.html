@@ -13,6 +13,11 @@
         console.log(navigator.plugins)
         console.log(navigator.storage)
         console.log(navigator.userAgent)
+        if(navigator.javaEnabled()){
+            console.log("Java enabled")
+        }else{console.log("Java disabled")}
+
+        
     </script>
 </head>
 <body>
