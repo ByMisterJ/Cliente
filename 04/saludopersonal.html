@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function closeWindow() {
-            window.close()
+        function saludar() {
+            var nombre = document.getElementById("name").value;
+            alert("Hola, bon dia " + nombre);
         }
-                document.write(window.innerWidth + 'x' + window.innerHeight)
     </script>
 </head>
 <body>
-    <h3>Spam</h3>
+    <input type="text" id="name" placeholder="Nombre">
     <br>
-    <button onclick="closeWindow()">Cerrar</button>
-    
+    <button onclick="saludar()">Saludo</button>
 </body>
 </html>

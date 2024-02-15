@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function enviarform() {
+            var name = document.getElementById("name").value;
+            var apellidos = document.getElementById("apellidos").value;
+            var email = document.getElementById("email").value;
+            var sexo = document.getElementById("sexo").value;
+            if (name === "" || apellidos === "" || email === "" || sexo === "") {
+                alert("Faltan datos por rellenar");
+            } else {
+                alert("Formulario enviado");
+            }
+        }
+        function resetform() {
+            document.getElementById("name").value = "";
+            document.getElementById("apellidos").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("sexo").value = "";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="Nombre">
+        <br>
+        <input type="text" id="apellidos" placeholder="Apellidos">
+        <br>
+        <input type="text" id="email" placeholder="email">
+        <br>
+        <input type="radio" id="sexo" name="sexo" >
+        <label for="sexo">Mujer</label>
+        <br>
+        <input type="radio" id="sexo" name="sexo">
+        <label for="sexo">Hombre</label>
+        <br>
+        <button onclick="enviarform()">Verify formulary</button>
+        <button onclick="resetform()">Reset formulary</button>
+    </form>
+</body>
+</html>

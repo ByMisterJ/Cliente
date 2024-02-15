@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Abre una nueva ventana y guarda la referencia
+        var newWindow = window.open('https://www.google.com');
+
+        // Luego, puedes cerrar la nueva ventana desde la ventana original
+        function closeWindow() {
+            newWindow.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="window.open('https://www.google.com')">Open Google</button>
+    <button onclick="window.close()">Close</button>
+    
+    <button onclick="newWindow.close()">cierra</button>
+</body>
+</html>

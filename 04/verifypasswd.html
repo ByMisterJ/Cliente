@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function verifyPassword() {
+                var password = document.getElementById("passwd").value;
+                if (password === "paco1234") {
+                    alert("Password is correct");
+                } else {
+                    alert("Password is incorrect");
+                }
+            }
+    </script>
+</head>
+<body>
+<input type="password" id="passwd" placeholder="Enter password">
+<button onclick="verifyPassword()">Verify Password</button>
+    
+</body>
+</html>
