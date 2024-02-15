@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function posteo() {
+                let name = document.getElementById("name").value;
+                if (name == "") {
+                    alert("El campo nombre está vacío");
+                    return false;
+                } else {
+                    if (confirm("¿Estás seguro de enviar el formulario?")) {
+                        alert("Se envió el formulario");
+                        return true;
+                    } else {
+                        alert("No se envió el formulario");
+                        return false; 
+                    }
+                }
+            }
+        </script>
+        </head>
+        <body>
+            <h3>Formulario</h3>
+            <form action="https://www.uji.es/" method="post" onsubmit="return posteo()">
+                <input type="text" id="name" placeholder="Nombre">
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+</body>
+</html>

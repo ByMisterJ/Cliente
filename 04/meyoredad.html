@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script>
+            function validarEdad(){
+                let edad = document.getElementById('edad').value;
+                if(edad >= 18){
+                    alert('Eres mayor de edad');
+                }else{
+                    alert('Eres menor de edad');
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="https://www.marca.com/" method="get">
+            <input type="text" id="edad" placeholder="Edad">
+            <button onclick="return validarEdad()">Validar</button>
+        </form>
+</body>
+</html>
