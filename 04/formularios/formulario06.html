@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularPEID() {
+            let altura = document.getElementById("altura").value;
+            let peso = document.getElementById("peso").value;
+            let edad = document.getElementById("edad").value;
+            let sexo = document.getElementById("sexo").value;
+
+            if (sexo == "masculino") {
+                let peid = 50 + 0.75 * (altura - 150) + (edad - 20) / 4;
+            } else {
+                let peid = 45.5 + 0.75 * (altura - 150) + (edad - 20) / 4;
+            }
+
+            alert("Tu peso ideal es: " + peid);
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="altura">Altura:</label>
+    <input type="text" id="altura" name="altura"><br><br>
+
+    <label for="peso">Peso:</label>
+    <input type="text" id="peso" name="peso"><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="text" id="edad" name="edad"><br><br>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit" onclick="calcularPEID()">
+    <input type="reset" value="Reset">
+</form>
+    
+</body>
+</html>

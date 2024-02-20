@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function raza(si){
+            var type = si
+            alert("eres "+type);
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="humano" name="humano" onblur="raza(humano)">
+        <label for="type">humano</label>
+        <input type="text" id="animal" name="animal" onblur="raza(animal)">
+        <label for="type">animal</label>
+        <input type="text" id="vegetal" name="vegetal" onblur="raza(vegetal)">
+        <label for="type">vegetal</label>
+    </form>
+</body>
+</html>

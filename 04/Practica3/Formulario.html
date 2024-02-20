@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+            var nombre = document.getElementById("nombre").value;
+            var apellidos = document.getElementById("apellidos").value;
+            var telefono = document.getElementById("telefono").value;
+            var dni = document.getElementById("dni").value;
+            var edad = document.getElementById("edad").value;
+            var sexo = document.getElementById("sexo").value;
+            var foto = document.getElementById("foto").value;
+
+            var nombreRegex = /^[a-zA-Z\s]*$/;
+            var apellidosRegex = /^[a-zA-Z\s]*$/;
+            var telefonoRegex = /^[0-9]{9}$/;
+            var dniRegex = /^[0-9]{8}[QWERTYUPASDFGHJKLZXCVBNM]{1}$/i;
+            var edadRegex = /^[0-9]{1,3}$/;
+            var sexoRegex = /^(masculino|femenino)$/i;
+            var fotoRegex = /\.(jpg|jpeg|png|gif)$/i;
+
+            if (!nombreRegex.test(nombre)) {
+                alert("El nombre no es válido");
+                return false;
+            }
+
+            if (!apellidosRegex.test(apellidos)) {
+                alert("Los apellidos no son válidos");
+                return false;
+            }
+
+            if (!telefonoRegex.test(telefono)) {
+                alert("El teléfono no es válido");
+                return false;
+            }
+
+            if (!dniRegex.test(dni)) {
+                alert("El DNI no es válido");
+                return false;
+            }
+
+            if (!edadRegex.test(edad)) {
+                alert("La edad no es válida");
+                return false;
+            }
+
+            if (!sexoRegex.test(sexo)) {
+                alert("El sexo no es válido");
+                return false;
+            }
+
+            if (!fotoRegex.test(foto)) {
+                alert("La foto no es válida");
+                return false;
+            }
+        }
+        
+        function showSelectedOption() {
+            var selectedOption = document.getElementById("aficiones").value;
+            var optionIndex = document.getElementById("aficiones").selectedIndex;
+            var optionLength = document.getElementById("aficiones").length;
+            
+            alert("Longitud de la lista: " + optionLength + "\nNúmero del índice seleccionado: " + (optionIndex+1) + "\nValor del índice seleccionado: " + selectedOption);
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos"><br><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono"><br><br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni"><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad"><br><br>
+
+    <label for="sexo">Sexo:</label>
+    <input type="radio" id="sexo" name="sexo" value="masculino">Masculino
+    <input type="radio" id="sexo" name="sexo" value="femenino">Femenino<br><br>
+
+    <label for="foto">Incluir mi foto:</label>
+    <input type="file" id="foto" name="foto"><br><br>
+
+    <label for="publicidad">Enviar publicidad:</label>
+    <input type="checkbox" id="publicidad" name="publicidad"><br><br>
+    
+    <label for="aficiones">Elige tu aficion favorita:</label>
+    <select id="aficiones" name="aficiones" onchange="showSelectedOption()">
+        <option value="musica">Música</option>
+        <option value="lectura">Lectura</option>
+        <option value="deporte">Deporte</option>
+    </select><br><br>
+
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" name="observaciones"></textarea><br><br>
+    
+    <input type="submit" value="Guardar cambios" onclick="return validateForm()">
+    <input type="reset" value="Borrar los datos introducidos">
+    
+</form>
+    
+</body>
+</html>

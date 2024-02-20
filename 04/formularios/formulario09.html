@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+        
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required><br><br>
+        
+        <label for="nif">NIF/NIE:</label>
+        <input type="text" id="nif" required><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validateForm() {
+            var nifInput = document.getElementById("nif").value;
+            var nifRegex = /^[0-9]{8}[QWERTYPASDFGHJKLZXCVBNM]{1}$/i;
+
+            if (!nifRegex.test(nifInput)) {
+                alert("El NIF/NIE no es válido");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

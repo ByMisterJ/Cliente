@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <script>
+        function validateForm() {
+            var nombre = document.forms["myForm"]["nombre"].value;
+            var fecha = document.forms["myForm"]["fecha"].value;
+            var telefono = document.forms["myForm"]["telefono"].value;
+
+            if (nombre == "") {
+                alert("El campo nombre no puede estar vacío");
+                return false;
+            }
+
+            if (isNaN(fecha) || isNaN(telefono)) {
+                alert("La fecha y el teléfono deben ser valores numéricos");
+                return false;
+            }
+
+            return confirm("¿Estás seguro de enviar el formulario?");
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="text" id="fecha" name="fecha" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="sexo" name="sexo" value="masculino" required> Masculino
+        <input type="radio" id="sexo" name="sexo" value="femenino" required> Femenino<br><br>
+
+        <label for="mayor">Mayor de edad:</label>
+        <input type="checkbox" id="mayor" name="mayor" required><br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>
