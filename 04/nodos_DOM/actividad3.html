@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Next Sibling Example</title>
+  <style>
+    .paragraph {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Next Sibling Example</h1>
+  
+  <p class="paragraph">Paragraph 1</p>
+  <p class="paragraph">Paragraph 2</p>
+  <p class="paragraph">Paragraph 3</p>
+  
+  <button onclick="deleteNextSibling()">Delete Next Sibling</button>
+  
+  <script>
+    function deleteNextSibling() {
+      var paragraphs = document.getElementsByClassName("paragraph");
+      if (paragraphs.length > 0) {
+        var nextSibling = paragraphs[0].nextSibling;
+        if (nextSibling) {
+          nextSibling.remove();
+        }
+      }
+    }
+  </script>
+</body>
+</html>

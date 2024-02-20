@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Child Example</title>
+  <script>
+    function removeListItem() {
+      var parentElement = document.getElementById("parent");
+      var listElement = document.getElementById("list");
+      var listItem = listElement.firstChild;
+
+      listElement.removeChild(listItem);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="parent">
+    <h1>Parent Element</h1>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+
+  <button onclick="removeListItem()">Remove Item</button>
+
+</body>
+</html>

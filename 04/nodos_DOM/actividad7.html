@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <script>
+        let counter = 0;
+
+        function createParagraph() {
+            counter++;
+            const paragraph = document.createElement("p");
+            paragraph.textContent = "Paragraph " + counter;
+            const hr = document.createElement("hr");
+            document.getElementById("container").appendChild(paragraph);
+            document.getElementById("container").appendChild(hr);
+        }
+
+        function deleteLastParagraph() {
+            const container = document.getElementById("container");
+            const lastParagraph = container.lastChild;
+            const lastHr = container.lastChild.previousSibling;
+            if (lastParagraph) {
+                container.removeChild(lastParagraph);
+                container.removeChild(lastHr);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createParagraph()">Create Paragraph</button>
+    <button onclick="deleteLastParagraph()">Delete Last Paragraph</button>
+    <div id="container"></div>
+</body>
+</html>

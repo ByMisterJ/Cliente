@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example of appendChild</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Example of appendChild</h1>
+    </div>
+
+    <script>
+        // Create a new paragraph element
+        var paragraph = document.createElement("p");
+        paragraph.textContent = "This is a dynamically created paragraph.";
+
+        // Append the paragraph element to the container div
+        var container = document.getElementById("container");
+        
+        container.appendChild(paragraph);
+        
+    </script>
+</body>
+</html>
